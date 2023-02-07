@@ -1,0 +1,67 @@
+.search {
+    border-bottom: 1px solid #a0d2eb;
+    .formSearch {
+        margin: 10px auto;
+        padding: 2px 10px;
+        display: flex;
+        width: 50%;
+        align-items: center;
+        flex-direction: row-reverse;
+        background-color: rgba(102, 102, 102, 0.7);
+        border-radius: 15px;
+        border: 1px solid #5b5d8b;
+        transition: 0.3s;
+        &:focus-within {
+            border: 1px solid rgba(255, 0, 0, 0.5);
+            width: 90%;
+        }
+        .icon {
+            color: darken($color: #fff, $amount: 20%);
+            transform: rotate(90deg);
+            margin-right: 8px;
+        }
+        input {
+            font-size: 15px;
+            width: 100%;
+            background-color: transparent;
+            line-height: 25px;
+            color: #fff;
+            &:not(:placeholder-shown)~.icon {
+                color: #fff;
+            }
+            &::placeholder {
+                color: darken($color: #fff, $amount: 20%);
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.userChat {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+        background-color: #494d5f;
+    }
+    img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .userChatInfo {
+        span {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 12px;
+            font-weight: 300;
+            color: lightgray;
+        }
+    }
+}

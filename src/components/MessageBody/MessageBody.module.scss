@@ -1,0 +1,16 @@
+.message-body {
+    padding: 10px;
+    height: calc(100% - 110px);
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #5b5d8b;
+        border-radius: 10px;
+    }
+}

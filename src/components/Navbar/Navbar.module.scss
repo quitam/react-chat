@@ -1,0 +1,50 @@
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 10px;
+    justify-content: space-between;
+    color: #fff;
+    .logo {
+        font-weight: bold;
+        @include tablet() {
+            display: none;
+        }
+    }
+    .user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        img {
+            border: 1px solid #45b8ac;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .logout-btn {
+            background-color: #d0bdf4;
+            color: #e5eaf5;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            @include tablet() {
+                position: fixed;
+                top: 3vh;
+                right: 5vw;
+            }
+            &:hover {
+                background-color: red;
+                color: #fff;
+            }
+        }
+    }
+}
