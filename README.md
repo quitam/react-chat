@@ -1,5 +1,5 @@
 Techlogies:
-- Frontend: ReacJS
+- Frontend: ReactJS
 - Database, Auth: Firebase
 
 
